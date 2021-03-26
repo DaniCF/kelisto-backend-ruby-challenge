@@ -1,0 +1,19 @@
+He tratado que el codigo sea corto pero facil de leer y entender.
+
+Por lo que yo he entendido, he creado unos booleanos relacionados con los descuentos descritos en el ejercicio, de tal forma que a la hora de crear el carro, estos descuentos se puedan activar o no.
+Dentro de la clase existe un diccionario con los codigos y precios de los objetos. Entiendo que en una situacion real, esta información se podria sacar de una base de datos en este mismo punto.
+Tambien existe una variable 'list' llamada 'shop_cart' en la que se van añadiendo los codigos a medida que se escanean con la funcion 'scan'.
+La primera funcion es un init. Crea el carro con los descuentos especificados.
+La funcion 'scan' simplemente añade los items a la lista 'shop_cart'
+La funcion 'total' incluye de los siguientes elementos:
+-La variable totalPrice, para recoger el valor total.
+-Dado que los descuentos se aplican a los productos GR1 y SR1, he creado variables que actuan como contadores de ambos productos, que se utilizaran mas adelante a la hora de aplicar el descuento.
+-Con un loop forin, se suma el valor de los productos sin descuento, al mismo tiempo que se van contando los productos GR1 y SR1.
+-Despues, un primer if comprueba si el primer descuento esta aplicado, y en caso afirmativo, divide el contador de GR1 entre 2, y el resultado queda redondeado hacia abajo (ej: 1/2 = 0). Este valor se multiplica por el valor del producto, y el resultado final se resta del total.
+-El segundo if comprueba no solo si el descuento esta aplicado, si no ademas que el numero de productos SR1 sea mayor o igual a 3. En caso afirmativo, se resta el numero de productos por 0.50 del total (al valer ahora 4.50 cada uno).
+-Finalmente, la función imprime el precio final.
+
+He tratado en la función final de usar solo un loop para que sea lo más optimo posible.
+Tambien creo que para que la aplicacion sea más flexible con el tema de los descuentos, dichos descuentos tendrian que ser funciones aparte, en vez de estar "hardcodeado" en la funcion final.
+
+Para probar el codigo, usar el archivo 'main.py'. Ahí podeis quitar y/o añadir productos, ademas de activar o desactivar los descuentos.
